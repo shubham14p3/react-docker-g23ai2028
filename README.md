@@ -1,4 +1,4 @@
-# Technology Article App on Ruby on Rails
+# VTIRTUALIZATION AND CLOUD COMPUTING - React Docker G23AI2028
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -44,72 +44,84 @@ To get started with the app, cd to the directory where you would like the repo t
 $ cd <directory>
 ```
 
-Clone the repo typing:
+# Clone the repo typing:
 
 ```
-$ git clone https://github.com/shubham14p3/ror-techno-articles.git
+$ git clone git@github.com:shubham14p3/react-docker-g23ai2028.git
 ```
 
-Install the needed gems:
+# Step 1: Install the needed package:
 
 ```
-$ bundle install
+$ npm i
 ```
 
-and then
+# Step 2: Build the Docker Image
 
 ```
-$ rake db:setup
+$ docker build -t react-docker-g23ai2028 .
 
 ```
 
-Next, migrate the database:
+# Step 3: Check Docker images
 
 ```
-$ rails db:migrate
+$ docker images
+```
+# Step 4: Run the Docker Container
+
+```
+$ docker run -p 5173:5173 react-docker-g23ai2028
 ```
 
-Finally, start server:
+Finally, docker is ready on the port 5173:
 
 ```
-$ rails server
+Open below link in your browser.
+Local:   http://localhost:5173/
+Network: http://172.17.0.2:5173/
 ```
 
-Open `http://localhost:3000/` in your browser.
+## Extra Knowledge: Setting up Docker in local
+
+Create new file Dockerfile and place the below code
+
+```
+# Use an official Node.js runtime as a parent image
+FROM node:20-alpine
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json .
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 5173
+
+# Define the command to run the app
+CMD [ "npm","run","dev" ]
+```
+Create new file `.dockerignore` to ignore larger file from the Image similar to .gitignore
 
 ### Prerequisites (Minimum)
 
-Ruby: 2.6.6
-Rails: 5.2.3
-Postgres: >=9.5
+- NodeJS
+- Docker
+- Github
 
-### Run tests
+### Refereces
 
-```
-    rpsec --format documentation { path }
-```
+- [Docker](https://docs.docker.com/guides/getting-started/)
+- [React](https://react.dev/learn)
+- [Vite](https://vitejs.dev/guide/)
 
-
-### Deployment
-
-#### Heroku
-
-  Create a Heroku App
-
-  ```
-      $ heroku create
-  ```
-  Push the changes to the Heroku App
-
-  ```
-      $ git push heroku master
-  ```
-
-  Make a migration to the Heroku App
-
-  ```
-      $ heroku run rails db:migrate
-  ```
 ## Note
 
 - Try to use images in dark solid background it will improve the styling.
@@ -128,7 +140,7 @@ Postgres: >=9.5
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/shubham14p3/ror-techno-articles/issues).
+Feel free to check the [issues page](https://github.com/shubham14p3/react-docker-g23ai2028/issues).
 
 ## Show your support
 
@@ -141,10 +153,10 @@ Give a ⭐️ if you like this project!
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/shubham14p3/members-only.svg?style=flat-square
-[contributors-url]: https://github.com/shubham14p3/ror-techno-articles/graphs/contributors
+[contributors-url]: https://github.com/shubham14p3/react-docker-g23ai2028/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/shubham14p3/members-only.svg?style=flat-square
-[forks-url]: https://github.com/shubham14p3/ror-techno-articles/network/members
+[forks-url]: https://github.com/shubham14p3/react-docker-g23ai2028/network/members
 [stars-shield]: https://img.shields.io/github/stars/shubham14p3/members-only.svg?style=flat-square
-[stars-url]: https://github.com/shubham14p3/ror-techno-articles/stargazers
+[stars-url]: https://github.com/shubham14p3/react-docker-g23ai2028/stargazers
 [issues-shield]: https://img.shields.io/github/issues/shubham14p3/members-only.svg?style=flat-square
-[issues-url]: https://github.com/shubham14p3/ror-techno-articles/issues
+[issues-url]: https://github.com/shubham14p3/react-docker-g23ai2028/issues
