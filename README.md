@@ -122,11 +122,6 @@ Create new file `.dockerignore` to ignore larger file from the Image similar to 
 - [React](https://react.dev/learn)
 - [Vite](https://vitejs.dev/guide/)
 
-## Note
-
-- Try to use images in dark solid background it will improve the styling.
-- If there is any Ruby version mismatch, you can replace the version between (2.6.6 to 2.7.0)
-
 ## Authors
 
 👤 **Shubham Raj**
