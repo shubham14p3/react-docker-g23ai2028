@@ -18,7 +18,7 @@ React Docker Web Application built with React, deployed using Docker containers.
 - Dockerized application with custom Dockerfile.
 - Easy deployment and scaling with Docker.
 
-## Tasks
+## Assignment Task
 
 - Step 1: Deploy a sample web application using docker containers by creating docker images from scratch. Existing docker container images are not allowed
 
