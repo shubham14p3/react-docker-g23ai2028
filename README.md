@@ -28,6 +28,11 @@ React Docker Web Application built with React, deployed using Docker containers.
 
 ![screenshot1](src/assets/images/screenshot01.PNG)
 
+## Docker Build Successfull on Docker App
+![screenshot2](src/assets/images/docker1.PNG)
+
+## Docker Build on Docker App
+![screenshot3](src/assets/images/docker2.PNG)
 
 ## Built With
 
@@ -56,18 +61,21 @@ $ git clone git@github.com:shubham14p3/react-docker-g23ai2028.git
 $ npm i
 ```
 
-# Step 2: Build the Docker Image
+# Step 2: Build the Docker Image 
 
 ```
 $ docker build -t react-docker-g23ai2028 .
 
 ```
+- Note: The above command run only when the Docker App / or the Repo is Connected to Docker Software
 
 # Step 3: Check Docker images
 
 ```
 $ docker images
 ```
+- Note: Refer Above images
+
 # Step 4: Run the Docker Container
 
 ```
